@@ -26,7 +26,7 @@ jobs:
       run: npm install -g newman
     
     - name: install newman-reporter-htmlextra
-      run: npm install -g newman-reporter-htmlextra
+      run: npm install -g newman-reporter-html
 
     - name: Build
       run: npm run build --if-present
@@ -51,7 +51,7 @@ jobs:
       run: pytest playwright/run_test.py --html=UI_report.html --self-contained-html
 
     - name: API test
-      run: newman run API/baidu.postman_collection.json -r htmlextra --reporter-html-export newman/API_report.html
+      run: newman run API/baidu.postman_collection.json -r html --reporter-html-export API_report.html
 
     - name: Upload UI test report
       uses: actions/upload-artifact@v2
@@ -66,4 +66,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: API-test-report
-        path: newman/API_report.html
+        path: API_report.html
