@@ -60,7 +60,7 @@ jobs:
         path: UI_report.html
     
     - name: print local file
-      run: ls -l  
+      run: cd newman && ls -l
 
     - name: Upload API test report
       uses: actions/upload-artifact@v2
