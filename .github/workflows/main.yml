@@ -51,7 +51,7 @@ jobs:
       run: pytest playwright/run_test.py --html=UI_report.html --self-contained-html
 
     - name: API test
-      run: newman run test.postman_collection.json -r \
+      run: newman run API/baidu.postman_collection.json -r \
           htmlextra --reporter-html-export html_report.html
 
     - name: Upload UI test report
