@@ -52,7 +52,7 @@ jobs:
 
     - name: API test
       run: newman run API/baidu.postman_collection.json -r \
-          htmlextra --reporter-html-export html_report.html
+          htmlextra --reporter-html-export API_report.html
 
     - name: Upload UI test report
       uses: actions/upload-artifact@v2
