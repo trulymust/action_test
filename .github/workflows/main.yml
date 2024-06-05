@@ -58,9 +58,6 @@ jobs:
       with:
         name: UI-test-report
         path: UI_report.html
-    
-    - name: print local file
-      run: cd newman && ls -l
 
     - name: Upload API test report
       uses: actions/upload-artifact@v2
