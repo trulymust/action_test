@@ -38,6 +38,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r playwright/requirements.txt
 
+    - name: Install missing libraries
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libwoff1 libvpx6 libevent-2.1-6 libopus0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libharfbuzz-icu0 libhyphen0 libmanette-0.2-0 libflite1 libgles2 libx264-155
+
     - name: Run Python script
       run: playwright install
 
