@@ -27,3 +27,19 @@ jobs:
 
     - name: Deploy
       run: echo "Deploying to your server..."
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r playwright/requirements.txt
+
+    - name: Run Python script
+      run: playwright install
+
+    - name: pytest the script
+      run: pytest playwright/run_test.py
