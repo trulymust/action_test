@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "0e678931-5bf4-4cee-86eb-a77fc587fee4",
+		"name": "baidu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5689209"
+	},
+	"item": [
+		{
+			"name": "baidu_test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "www.baidu.com",
+					"host": [
+						"www",
+						"baidu",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
