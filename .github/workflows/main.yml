@@ -42,4 +42,10 @@ jobs:
       run: playwright install
 
     - name: pytest the script
-      run: pytest playwright/run_test.py
+      run: pytest playwright/run_test.py --html=report.html --self-contained-html
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: report.html
