@@ -59,6 +59,9 @@ jobs:
         name: UI-test-report
         path: UI_report.html
     
+    - name: print local file
+      run: ls -l  
+
     - name: Upload API test report
       uses: actions/upload-artifact@v2
       with:
