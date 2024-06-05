@@ -64,4 +64,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: API-test-report
-        path: API_report.html
+        path: newman/API_report.html
